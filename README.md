@@ -1,23 +1,64 @@
-# Phishing Email Analysis: "Free EDT Mini-Tool"  
-**Date:** [27/05/2025]  
 
-## 📧 Email Sample  
-**Subject:** "Dear Survivalist, Claim Your Free EDT Mini-Tool!"  
-**From:** (No sender address provided)  
+## 🛠️ Analysis Process
 
-## 🔎 Phishing Indicators  
-| **Indicator**            | **Example**                                | **Risk Level** |  
-|--------------------------|--------------------------------------------|----------------|  
-| Urgent/scarcity language | "Claim now, limited stock!"                | High           |  
-| Deceptive links          | "Click here" → `free-survival-tools[.]biz  | Critical       |  
-| "100% free" lure         | Requests feedback (data collection)        | Medium         |  
-| Poor formatting          | Excessive ellipses (...)                   | Low            |  
+### Step 1: Initial Observation
+- Identified the email in my spam folder
+- Noticed several red flags:
+  - Generic greeting ("Dear Survivalist")
+  - Urgent language ("limited first run")
+  - "100% free" offer
 
-## 🛡️ Recommendations  
-- ❌ **Do NOT click links** in unsolicited emails.  
-- 📧 **Forward phishing emails** to `report@phishing.gov`.  
-- 🔗 **Verify offers** on the official company website.  
+### Step 2: Header Analysis
+- Could not access full headers (common in spam emails)
+- Noted missing legitimate sender address
 
-## 🕵️ Tools Used  
-- **URL Scanner:** [VirusTotal](https://www.virustotal.com/)  
-- **Header Analyzer:** [MxToolbox](https://mxtoolbox.com/)  
+### Step 3: Link Examination
+- Hovered over links (without clicking) to reveal:
+  - Display text: "Click here to see it in action now"
+  - Actual URL: `free-survival-tools[.]biz` (suspicious domain)
+  - Used VirusTotal to verify domain reputation
+
+### Step 4: Content Analysis
+- Identified psychological triggers:
+  - Scarcity tactic ("only have a few left")
+  - False urgency ("can't hold yours for long")
+  - Social proof request ("forward to someone")
+
+### Step 5: Verification
+- Searched for legitimate EDT Mini-Tool - no official product found
+- Checked for company registration - none associated with the domain
+
+## 📋 Phishing Indicators Found
+
+| Indicator Type          | Example                                  | Severity |
+|-------------------------|------------------------------------------|----------|
+| Suspicious Domain       | free-survival-tools[.]biz                | High     |
+| Urgency Tactics         | "Claim now, limited stock!"              | Medium   |
+| Too-Good-To-Be-True     | "100% free" with no clear business model | High     |
+| Request to Share        | "Forward this message"                   | Low      |
+| Poor Grammar            | Excessive ellipses (...)                 | Low      |
+
+## 📂 Repository Contents
+- `EDT_MiniTool_Phishing_Analysis.md`: Detailed analysis report
+- `email_sample.txt`: Text copy of the phishing email
+- `screenshots/`: Visual evidence (if available)
+
+## 🛡️ Protective Recommendations
+1. **For Users:**
+   - Never click links in unsolicited emails
+   - Verify offers on official websites
+   - Use email filters to block similar messages
+
+2. **For Developers:**
+   - Implement DMARC/DKIM/SPF records
+   - Educate users about phishing tactics
+   - Report phishing attempts to [APWG](https://apwg.org)
+
+## � How to Contribute
+1. Clone this repository
+2. Add new phishing samples to analyze
+3. Submit pull requests with additional analyses
+4. Share detection techniques
+
+## 📜 License
+This project is open source under the MIT License.
